@@ -1,0 +1,88 @@
+\documentclass[12pt,desert]{cool-white-paper}
+% desert, mountain, sky (default), violet
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Set titles and authors
+\setTitle{On computable numbers, with an application to the Entscheidungsproblem: Another correction}
+\setSubtitle{Some corrections to formal proofs in a previously published paper on the same exact topic}
+
+\addAuthor{Primo Autore}{Primo is PhD student at Some University.}
+\addAuthor{Secondo Ricercatore}{Secondo is Some Position at Some University. He has got his PhD at Some Other University on some date.}
+\addAuthor{Terzo Supervisore}{Terzo is Some Position at Some University. He has got his PhD at Some Other University on some date.}
+
+% Hyphen long URLs
+% \usepackage[hyphens]{url} % Either this line or the next lines
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref} % Either these lines or the previous
+\hypersetup{
+    pdfauthor={\plainAuthors}
+  , pdfkeywords={power system,uk}
+  , pdftitle={\insertTitle}
+  , colorlinks % =false will enable borders 
+  , linkcolor=
+  , linkbordercolor={palette55}
+  , pdfborderstyle={/S/U/W 1}
+  , citecolor={palette35}
+  , urlcolor={palette35}
+  , bookmarksopen
+  , bookmarksdepth=2
+}
+\usepackage{hypcap}
+
+
+\begin{document}
+\addInstitutionLogo{dummy-logo.pdf}
+\frontpage[(optional) May 2021]{background.jpg}{frontpage.pdf}
+\authorBios
+
+
+\section*{Acronyms}
+\begin{minipage}[t]{0.44\textwidth}
+  \begin{center}
+    \rowcolors{2}{oddrows}{evenrows}
+    \begin{longtable}{ T F }
+    \multicolumn{2}{r}{\color{subtitles}{\small \em continued on next page}} \\ \endfoot
+    \endlastfoot
+      
+      \acr{CA}       & Certificate Authority \\
+      \acr{IoT}      & Internet of Things \\
+      \acr{PKI}      & Public-Key Infrastructure \\
+      
+    \end{longtable}
+  \end{center}
+\end{minipage}%
+\begin{minipage}{0.08\textwidth}\strut \end{minipage}%
+\begin{minipage}[t]{0.44\textwidth}
+  \begin{center}
+    \rowcolors{2}{oddrows}{evenrows}
+    \begin{longtable}{ T F }
+    \multicolumn{2}{r}{\color{subtitles}{\small \em continued on next page}} \\ \endfoot
+    \endlastfoot
+    
+      \acr{CA}       & Certificate Authority \\
+      \acr{IoT}      & Internet of Things \\
+      \acr{PKI}      & Public-Key Infrastructure \\
+      
+    \end{longtable}
+  \end{center}
+\end{minipage}%
+
+\tableofcontents
+
+\chapter[Chapter that appears too long to stay in one line]{\nohyphens{Chapter that appears too long to stay \tnl in one line}}
+
+EXPERIMENTAL: text with an acronym, e.g. \gl{PKI}, that gets hyperlinked to the glossary/acronyms entry.
+
+\section{Section}
+\lipsum[1]
+\subsection{Subsection}
+\lipsum[2]
+\subsubsection{Subsubsection}
+\lipsum[3]
+
+\section[This is an example of a section whose title is too long to stay in one line]{This is an example of a section whose title is too long \stnl to stay in one line}
+\lipsum[4]
+
+\lastpage{backpage.pdf}
+\end{document}
